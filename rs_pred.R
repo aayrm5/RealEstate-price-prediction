@@ -1,7 +1,5 @@
 rm(list = ls())
-getwd()
 
-setwd("E:\\Riz\\Edvancer\\Real_Estate_Project")
 df_train = read.csv("housing_train.csv",stringsAsFactors = F)
 df_test = read.csv("housing_test.csv",stringsAsFactors = F)
 df_test$Price = NA
@@ -430,6 +428,3 @@ Score_gbm
 
 #Final predictions
 pred_boost_test = predict(boost,newdata = r_df_test,n.trees = 5000)
-
-write.csv(pred_boost_test,'Riyaz_Ali_P1_Part2.csv',row.names = F)
-
